@@ -5,16 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-node",
+            "name": "ts-node",
+            "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
+            "args": [
+                "${relativeFile}"
             ],
-            "program": "${workspaceFolder}\\masa-online-lesson4.ts",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector",
+            "internalConsoleOptions": "openOnSessionStart"
         }
+        
     ]
 }
