@@ -1,1 +1,3 @@
 Text REBASE
+
+text rebase commit 2
